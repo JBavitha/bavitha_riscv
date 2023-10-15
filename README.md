@@ -52,11 +52,16 @@
 
 - AND gate
 
-![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/fc2c9cfb-8ac4-48de-ad1e-1a75a98a32ab)
+
 
 - Arithmetic Operations (using vectors)
 
-![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/a5f52ed0-b73b-420a-b162-a16c80b02496)
+
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/548d491d-d55f-4b49-8bc9-6d5787d87f34)
+
+- 
+
+
 
 
 </details>
