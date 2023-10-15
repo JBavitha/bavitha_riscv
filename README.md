@@ -52,6 +52,7 @@
 
 - AND gate
 
+![Screenshot from 2023-10-15 15-08-42](https://github.com/JBavitha/bavitha_riscv/assets/142578450/32bbd58e-9c30-4f9f-9277-14197c61c27f)
 
 
 - Arithmetic Operations (using vectors)
@@ -59,19 +60,99 @@
 
 ![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/548d491d-d55f-4b49-8bc9-6d5787d87f34)
 
-- 
+- Multiplexer
+'''$out  = $sel ? $in1: $in2'''
 
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/afd008ec-089d-426a-879b-c4367b41e283)
+
+'''$out[7:0]  = $sel ? $in1[7:0]: $in2[7:0]'''
+
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/c51825ee-d564-4c2c-9189-5c45272e6deb)
 
 
 
 </details>
 
 
+### Sequential Logic
+<details>
+
+<summary>Introduction To Sequential Logic And Counter Lab </summary>  
+
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/df2930bf-71c3-414f-9271-83e74e1cbe78)
+
+- Sequential Logic is sequenced by a clock signal
+- D-flipflop
+  - Q Output: This is the main output of the flip-flop and represents the state of the D input at the last clock edge. It reflects the data stored in the flip-flop.
+  - Q' (Q-bar) Output: This is the complement of the Q output. If Q is 1, then Q' is 0, and vice versa.
+  - The D flip-flop also has a Reset input that can be used to reset the flip-flop to a specific state.
+
+- The whole circuit can be viewed as bid state machine
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/750313d2-028b-4dd4-ae50-b5f8a0bbe017)
+
+#### Fibonacci series
+
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/077cdf73-1ab8-4999-bd09-37601d8b5267)
+
+- Reset
+
+```$val[15:0] = $reset ? 1 : >>1$val + >>2$val```
+
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/d37dfbfb-7515-4dc0-8fd3-fc32240ba6e8)
+
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/5756cbf7-6c3d-421a-957d-917c14d45238)
+
+
+
+</details>
+
+<details>
+
+<summary>Sequential Calculator Lab </summary>
+
+#### Values in verilog 
+
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/64e8eae5-1aeb-404f-9af3-21102502f404)
+
+- '0: All Os (width based on context).
+- 'X: All DONT-CARE bits.
+- 16'd5: 16-bit decimal 5.
+- 5'b00XX1: 5-bit value with DONT-CARE bits.
+- 1: 32-bit (signed) 1.
+
+- Our simulator configuration:
+  - will zero-extend or truncate when widths are mismatched (without warning)
+  - uses 2-state simulation (no X's)
+
+  
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</details>
 
 
 
