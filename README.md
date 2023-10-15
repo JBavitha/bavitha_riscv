@@ -103,6 +103,16 @@
 ![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/5756cbf7-6c3d-421a-957d-917c14d45238)
 
 
+#### Free running counter
+
+```
+$cnt[31:0] = $reset ? 0 : (1 + >>1$cnt);
+```
+
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/81626fef-c234-45c9-b244-e825bf7c1191)
+
+
+
 
 </details>
 
@@ -125,7 +135,9 @@
   - uses 2-state simulation (no X's)
 
   
+**Sequential Calculator**
 
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/1cce9dfd-0c52-425c-871c-b50882ba3c02)
 
 
 
