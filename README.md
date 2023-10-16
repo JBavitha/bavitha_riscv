@@ -140,31 +140,81 @@ $cnt[31:0] = $reset ? 0 : (1 + >>1$cnt);
 ![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/1cce9dfd-0c52-425c-871c-b50882ba3c02)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </details>
+
+<details>
+
+<summary></summary>
+
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/5e7d1e6c-df53-42cd-afa5-043c124ef9c6)
+
+**TL Verilog**
+```
+|calc
+         @1
+            $aa_sq[7:0] = $aa[3:0] ** 2;
+            $bb_sq[7:0] = $bb[3:0] ** 2;
+         @2
+            $cc_sq[8:0] = $aa_sq + $bb_sq;
+         @3
+            $cc[4:0] = sqrt($cc_sq);
+
+```
+**Retiming**
+```
+|calc
+         @0
+            $aa_sq[7:0] = $aa[3:0] ** 2;
+         @1 
+            $bb_sq[7:0] = $bb[3:0] ** 2;
+         @2
+            $cc_sq[8:0] = $aa_sq + $bb_sq;
+         @4
+            $cc[4:0] = sqrt($cc_sq);
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</details>
+
+
+
+
+
+**Implementation Plan**
+
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/957504ac-1cfe-4eb5-83b3-688634aa647b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
