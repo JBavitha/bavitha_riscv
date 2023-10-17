@@ -35,9 +35,9 @@
 
 ![Screenshot from 2023-10-15 14-24-42](https://github.com/JBavitha/bavitha_riscv/assets/142578450/5560388d-40f6-40a7-a46c-766997600188)
 
-
-
 </details>
+
+
 
 <details>
 
@@ -69,9 +69,9 @@
 
 ![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/c51825ee-d564-4c2c-9189-5c45272e6deb)
 
-
-
 </details>
+
+
 
 
 ### Sequential Logic
@@ -111,10 +111,10 @@ $cnt[31:0] = $reset ? 0 : (1 + >>1$cnt);
 
 ![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/81626fef-c234-45c9-b244-e825bf7c1191)
 
-
-
-
 </details>
+
+
+
 
 <details>
 
@@ -139,12 +139,17 @@ $cnt[31:0] = $reset ? 0 : (1 + >>1$cnt);
 
 ![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/1cce9dfd-0c52-425c-871c-b50882ba3c02)
 
-
 </details>
+
+
+
+
+### Pipelined Logic
+
 
 <details>
 
-<summary></summary>
+<summary>Introduction and Lab</summary>
 
 ![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/5e7d1e6c-df53-42cd-afa5-043c124ef9c6)
 
@@ -174,11 +179,46 @@ $cnt[31:0] = $reset ? 0 : (1 + >>1$cnt);
 
 ```
 
+**without pipeline**
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/74db6a0c-2848-42ab-bb65-036923a3aa14)
 
 
+**with pipeline**
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/bf29f346-3b07-4ee1-9998-1026a3790d7f)
+
+</details>
 
 
+<details>
 
+<summary>Labs</summary>
+
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/4868638c-5e8c-47a7-8ce6-0293b33ce72f)
+
+- Counter and Calculator in pipeline
+```
+|calc
+      @0
+         $reset = *reset;
+      @1
+         $val2[31:0] = $rand2[3:0];
+         $val1[31:0] = (>>1$out[31:0]);
+         $sum[31:0] = $val1[31:0] + $val2[31:0];
+         $diff[31:0] = $val1[31:0] - $val2[31:0];
+         $prod[31:0] = $val1[31:0] * $val2[31:0];
+         $quot[31:0] = $val1[31:0] / $val2[31:0];
+         $out[31:0] = $reset ? 32'b0 :
+                      ($op[1] ? ($op[0] ? $quot : $prod)
+                              : ($op[0]? $diff : $sum));
+         $cnt[31:0] = $reset ? 0 : (1 + >>1$cnt);
+
+```
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/8baeed5f-9e38-4018-b47b-ce66f5078be3)
+
+![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/f122d8b3-97d6-4af6-a2d4-0d1a9bf761be)
+
+
+</details>
 
 
 
@@ -188,7 +228,7 @@ $cnt[31:0] = $reset ? 0 : (1 + >>1$cnt);
 
 
   
-</details>
+
 
 
 
