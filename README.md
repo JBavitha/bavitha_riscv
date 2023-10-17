@@ -1282,6 +1282,7 @@ $cnt[31:0] = $reset ? 0 : (1 + >>1$cnt);
 </details>
 
 <details>
+
 <summary>Complete Instruction Decode</summary>
 
 
@@ -1419,6 +1420,7 @@ $cnt[31:0] = $reset ? 0 : (1 + >>1$cnt);
 </details>
 
 <details>
+
 <summary>Complete ALU</summary>
 
 ```
@@ -1573,12 +1575,10 @@ $cnt[31:0] = $reset ? 0 : (1 + >>1$cnt);
 ![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/5ea018a4-34d8-43b2-b2ee-6503c3e8f989)
 
 
-
-
-  
 </details>
 
-### 
+### Load/Store Instructions and Completing RISC-V CPU
+
 
 
 
