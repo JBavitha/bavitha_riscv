@@ -252,6 +252,7 @@ $cnt[31:0] = $reset ? 0 : (1 + >>1$cnt);
 
 <summary>Labs</summary>
 - Lab for program counter
+
 ![image](https://github.com/JBavitha/bavitha_riscv/assets/142578450/7b79dca1-d752-4d90-81de-aca35d769628)
 
 - Lab for instruction fetch
